@@ -1,0 +1,175 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    /*background-color: gray;*/
+    background: linear-gradient(180deg, rgb(255, 0, 180), rgb(0, 205, 255));
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+.logo {
+    display: flex; /* Permet de centrer l'image verticalement */
+    align-items: center; /* Centre verticalement l'image */
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: magenta;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Contact Page Main */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.contact-box {
+    background: linear-gradient(180deg, rgb(0, 250, 255), rgb(255, 0, 200));
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 50px 50px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.contact-box h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contact-box p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.principal {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; 
+}
+
+/* Style pour les bandes latérales */
+.left-bar, .right-bar {
+    position: fixed; /* Fixe les bandes latérales pour qu'elles restent en place */
+    top: 0;
+    bottom: 0;
+    width: 120px; /* Largeur des bandes latérales */
+    background-color: #000; 
+    z-index: 0;
+}
+
+.left-bar {
+    left: 0; /* Place la bande noire à gauche */
+}
+
+.right-bar {
+    right: 0; /* Place la bande noire à droite */
+}
+
+.top-bar {
+    background-color: #000;
+    color: #fff; 
+    position: relative; /* Ajout pour permettre le positionnement du logo et du texte */
+    top: 0; 
+    left: 0;  /* La largeur de la barre de gauche */
+    right: 0; /* La largeur de la barre de droite */
+    height: 100px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; /* Le texte est centré horizontalement */
+    padding: 0 20px; 
+    box-sizing: border-box; 
+    z-index: 1000;
+}
+
+.bottom-bar {
+    background-color: #000;
+    color: #fff; 
+    top: 100; 
+    left: 50px; 
+    right: 50px; 
+    height: 100px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 0 20px; 
+    box-sizing: border-box; 
+    z-index: 1000;
+}
+
+
+.logo {
+    position: absolute;  /* Absolument positionné par rapport à .top-bar */
+    left: 20px;          /* Le logo est aligné à gauche */
+}
+
+.text-top {
+    flex-grow: 1;         /* Permet au texte de prendre l'espace disponible et rester centré */
+    text-align: center;   /* Assure que le texte est centré dans son conteneur */
+}
+
+.menu {
+    position: absolute;   /* Absolument positionné pour être à droite */
+    right: 20px;          /* Le menu est aligné à droite */
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: #ee00ff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu a:hover {
+    color: #00d5ff;
+}
+
+.conteneur {
+    text-align: right; 
+    margin-top: 120px; 
+    padding: 20px; 
+    margin-right: 1px; 
+    margin-left: 100px; 
+}
+
+
+.mon-image {
+    width: 100px; /* Largeur de l'image */
+    height: auto; /* Maintient les proportions de l'image */
+}
+
+
+/*body {
+    background-image: url('bgsunset.avif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }*/

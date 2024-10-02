@@ -1,0 +1,311 @@
+body,html {
+    /*background-color: gray;*/
+    background: linear-gradient(180deg, rgb(255, 0, 180), rgb(0, 205, 255));
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+.principal {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.left-bar,
+.right-bar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 120px;
+    background-color: #000;
+    z-index: 0;
+}
+
+.left-bar {
+    left: 0;
+}
+
+.right-bar {
+    right: 0;
+}
+
+.top-bar {
+    background-color: #000;
+    color: #fff;
+    position: relative;
+    /* Ajout pour permettre le positionnement du logo et du texte */
+    top: 0;
+    left: 0;
+    /* La largeur de la barre de gauche */
+    right: 0;
+    /* La largeur de la barre de droite */
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Le texte est centré horizontalement */
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.bottom-bar {
+    background-color: #000;
+    color: #fff;
+    top: 100;
+    left: 50px;
+    right: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.logo {
+    position: absolute;
+    /* Absolument positionné par rapport à .top-bar */
+    left: 20px;
+    /* Le logo est aligné à gauche */
+}
+
+.text-top {
+    flex-grow: 1;
+    /* Permet au texte de prendre l'espace disponible et rester centré */
+    text-align: center;
+    /* Assure que le texte est centré dans son conteneur */
+}
+
+.menu {
+    position: absolute;
+    /* Absolument positionné pour être à droite */
+    right: 20px;
+    /* Le menu est aligné à droite */
+    display: flex;
+    gap: 20px;
+}
+
+
+.menu a {
+    color: #ee00ff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu a:hover {
+    color: #00d5ff;
+}
+
+.menuB {
+    position: center;
+    /* Absolument positionné pour être à droite */
+    /*right: 20px;          /* Le menu est aligné à droite */
+    gap: 20px;
+}
+
+
+.menuB a {
+    color: #ee00ff;
+    text-decoration: none;
+    font-size: 50px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menuB a:hover {
+    color: #00d5ff; /* Nouvelle couleur lorsque la souris passe dessus */
+    transform: scale(1.1); /* Agrandit légèrement le texte */
+    
+}
+
+.conteneur {
+    text-align: right;
+    margin-top: 50px;
+    padding: 20px;
+    margin-right: 1px;
+    margin-left: 100px;
+}
+
+.conteneurC {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.conteneurR {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+/* Ajout de contenu supplémentaire pour forcer le défilement */
+.content {
+    height: 2000px;
+    /* Ajoute de la hauteur au contenu pour forcer la scrollbar */
+}
+
+.mon-image {
+    width: 100px;
+    /* Largeur de l'image */
+    height: auto;
+    /* Maintient les proportions de l'image */
+}
+
+.side-by-side {
+    display: flex;
+    align-items: center;
+    /* Aligne l'image et le texte verticalement */
+    justify-content: space-between;
+    /* Espace entre les deux éléments */
+    margin: 1px;
+    /* Espace autour du conteneur */
+}
+
+.side-by-sideR {
+    display: flex;
+    align-items: center;
+    /* Aligne l'image et le texte verticalement */
+    justify-content: space-between;
+    /* Espace entre les deux éléments */
+    margin: 1px;
+    /* Espace autour du conteneur */
+}
+
+.text-side {
+    flex: 1;
+    margin-right: 100px;
+    /* Espace entre le texte et l'image */
+    text-align: center;
+    /* Centre le texte horizontalement */
+    display: flex;
+    /* Permet de centrer verticalement */
+    flex-direction: column;
+    /* Permet de faire un centrage en mode colonne */
+    justify-content: center;
+    /* Centre le texte verticalement */
+    font-size: 16px;
+    line-height: 1.2;
+}
+.text-sideR {
+    flex: 1;
+    margin-left: 100px;
+    /* Espace entre le texte et l'image */
+    text-align: center;
+    /* Centre le texte horizontalement */
+    display: flex;
+    /* Permet de centrer verticalement */
+    flex-direction: column;
+    /* Permet de faire un centrage en mode colonne */
+    justify-content: center;
+    /* Centre le texte verticalement */
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.text-side h1 {
+    font-size: 45px;
+}
+.text-sideR h1 {
+    font-size: 45px;
+}
+
+.marque h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #c6e2ff;
+    text-shadow:
+        0 0 6px rgba(202, 228, 225, 0.92),
+        0 0 30px rgba(202, 228, 225, 0.34),
+        0 0 12px rgba(30, 132, 242, 0.52),
+        0 0 21px rgba(30, 132, 242, 0.92),
+        0 0 34px rgba(30, 132, 242, 0.78),
+        0 0 54px rgba(30, 132, 242, 0.92);
+}
+
+.text-side p {
+    font-size: 18px;
+}
+.text-sideR p {
+    font-size: 18px;
+}
+
+.image-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-sideG {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-side img {
+    max-width: 75%;
+    width: 750px;
+    height: auto;
+}
+
+.image-sideG img {
+    max-width: 75%;
+    height: auto;
+}
+
+.two-images {
+    display: flex;
+    justify-content: center;
+    /* Centrer les images horizontalement */
+    /*gap: 1px; /* Espace entre les images */
+}
+
+.two-images a {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.two-images img {
+    max-width: 50%;
+    /* Chaque image prend 25% de la largeur du conteneur */
+    height: auto;
+    /* Maintient les proportions de l'image */
+}
+
+.gra {
+    size: 200px;
+}
+
+.image-hover {
+    transition: transform 0.3s ease;
+    /* Transition pour l'effet fluide */
+}
+
+/* Agrandir l'image au survol */
+.image-hover:hover {
+    transform: scale(1.1);
+    /* Agrandit l'image de 10% */
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+figcaption {
+    font-size: 14px;
+    color: #fff; /* Choisis une couleur qui va bien avec ton design */
+    margin-top: 5px; /* Petit espace entre l'image et la légende */
+    font-style: italic;
+}
+
